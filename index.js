@@ -2,13 +2,23 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const licenseGenerator = require('./utils/generateMarkdown.js');
-var badger = '';
+var date = date.getYear();
 // const generateMarkdown = require('./utils/generateMarkdown');
 // console.log(generateMarkdown.renderLicenseBadge);
 
 
 // TODO: Create an array of questions for user input
 const questions = [
+    // {
+    //     type: 'input',
+    //     message: 'What is your full Name?',
+    //     name: 'fullName',
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'What is the copyright year?',
+    //     name: 'Year',
+    // },
     // {
     //     type: 'input',
     //     message: 'What is your Github Username?',
@@ -77,12 +87,12 @@ const questions = [
     },
 ];
 
-
 // let fileName = "";
 // TODO: Create a function to write README file
 const writeToFile = (answers) =>
 `# ${answers.Title}
 ${licenseGenerator.renderLicenseBadge(...answers.License)}
+
 
 ## Description
 ${answers.Description}
@@ -113,6 +123,7 @@ The following persons assisted with this project.  If left blank, there were no 
 - ${answers.Tutorials}
 
 ## License
+© <${answers.Year}> ${answers.fullName}
 ${licenseGenerator.renderLicenseLink(...answers.License)}
 
 
@@ -123,6 +134,7 @@ If any questions, please direct them directly to me at ${answers.Email}
 `;
 
 
+
 // TODO: Create a function to initialize app
 function init() {
 
@@ -131,8 +143,7 @@ function init() {
     .then((answers) => {
         fileName = `${answers.Title.toLowerCase().split(' ').join('')}.md`;
             const READmeContent = writeToFile(answers);
-            // badger = licenseGenerator.renderLicenseBadge(...answers.License);
-            // console.log("this shouldnt be undefined " + badger);
+
         fs.writeFile(fileName, READmeContent, (err) =>
             err ? console.log(err) : console.log('Check out your README file!')
         );  
