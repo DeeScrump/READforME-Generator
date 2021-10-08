@@ -1,4 +1,5 @@
 # 09 Node.js Homework: Professional README Generator
+[Acceptance Criteria](#acceptance-criteria)
 
 ## Your Task
 
