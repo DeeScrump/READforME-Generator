@@ -1,5 +1,4 @@
-
-// Array for the
+// Array for the expected values of a license and badge
 const badgeLink = [
   {
       MIT: '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
