@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const 
+const licenseGenerator = require('generateMarkDown');
 
 // Array for the
 const license = [
@@ -93,9 +93,7 @@ const questions = [
 // let fileName = "";
 // TODO: Create a function to write README file
 const writeToFile = (answers) =>
-`
-
-# ${answers.Title}
+`# ${answers.Title}
 
 ## Description
 - ${answers.Motivation}
@@ -133,16 +131,6 @@ If any questions, please direct them directly to me at ${answers.Email}
 `;
 
 
-
-
-
-    // fileName = `${data.Title.toLowerCase().split(' ').join('')}.md`;
-    // fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>{
-    //         err ? console.log(err) : console.log('Success!')
-      // });
-// };
-
-
 // TODO: Create a function to initialize app
 function init() {
 
@@ -155,7 +143,6 @@ function init() {
         // fs.writeFile(fileName, JSON.stringify(answers, null, '\t'), (err) =>
         fs.writeFile(fileName, READmeContent, (err) =>
             err ? console.log(err) : console.log('Check out your README file!')
-            
         );  
     }); 
 }
