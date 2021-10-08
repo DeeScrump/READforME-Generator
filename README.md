@@ -22,11 +22,11 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 Examples for how this work will be via a screencastify video link in the README file itself created.
-![Video Cast of Functionality](assets\images\screencastifyread4megenerator.gif)
+![Video Cast of Functionality](./assets/images/screencastifyread4megenerator.gif)
 
 Please see screenshots attached
-- ![Screenshot of Working README](assets\images\screenshotofread4megenerator.png)
-- ![Screenshot of Working Terminal](assets\images\screenshotofread4megeneratorterminalinputs.png)
+- ![Screenshot of Working README](./assets/images/screenshotofread4megenerator.png)
+- ![Screenshot of Working Terminal](./assets/images/screenshotofread4megeneratorterminalinputs.png)
 
 
     
