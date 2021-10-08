@@ -16,66 +16,66 @@ const questions = [
         message: 'What is the copyright year?',
         name: 'Year',
     },
-    // {
-    //     type: 'input',
-    //     message: 'What is your Github Username?',
-    //     name: 'Github',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What is your email address?',
-    //     name: 'Email',
-    // },
+    {
+        type: 'input',
+        message: 'What is your Github Username?',
+        name: 'Github',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'Email',
+    },
     {
         type: 'input',
         message: 'What is your Project Title?',
         name: 'Title',
     },
-    // {
-    //     type: 'input',
-    //     message: 'Provide a short description of the project BEFORE we get into the details of the what, why, and how of your project.',
-    //     name: 'Description',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What was your motivation?',
-    //     name: 'Motivation',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Why did you build this project?',
-    //     name: 'WhyBuild',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What problem does it solve?',
-    //     name: 'Problem',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What did you learn?',
-    //     name: 'Learn',
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
-    //     name: 'Installation'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Provide instructions and examples for use.',
-    //     name: 'Usage',
-    // },
-    // {        
-    //     type: 'input',
-    //     message: 'What is the Github username for any contributors or persons you would like to give credit to?',
-    //     name: 'Contributors',
-    // },
-    // {        
-    //     type: 'input',
-    //     message: 'Are there any links you want to add that were used to support the development of this project?',
-    //     name: 'Tutorials',
-    // },
+    {
+        type: 'input',
+        message: 'Provide a short description of the project BEFORE we get into the details of the what, why, and how of your project.',
+        name: 'Description',
+    },
+    {
+        type: 'input',
+        message: 'What was your motivation?',
+        name: 'Motivation',
+    },
+    {
+        type: 'input',
+        message: 'Why did you build this project?',
+        name: 'WhyBuild',
+    },
+    {
+        type: 'input',
+        message: 'What problem does it solve?',
+        name: 'Problem',
+    },
+    {
+        type: 'input',
+        message: 'What did you learn?',
+        name: 'Learn',
+    },
+    {
+        type: 'input',
+        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+        name: 'Installation'
+    },
+    {
+        type: 'input',
+        message: 'Provide instructions and examples for use.',
+        name: 'Usage',
+    },
+    {        
+        type: 'input',
+        message: 'What is the Github username for any contributors or persons you would like to give credit to?',
+        name: 'Contributors',
+    },
+    {        
+        type: 'input',
+        message: 'Are there any links you want to add that were used to support the development of this project?',
+        name: 'Tutorials',
+    },
     {
         type: 'checkbox',
         message: 'Which license type are you using for this file',
@@ -121,7 +121,10 @@ The following persons assisted with this project.  If left blank, there were no 
 
 ## License
 © <${answers.Year}> ${answers.fullName}
+${licenseGenerator.renderLicenseSection(...answers.License)}
+
 ${licenseGenerator.renderLicenseLink(...answers.License)}
+
 
 
 ## Questions
